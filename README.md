@@ -1,27 +1,36 @@
 # AngularRouterAPIProject
+## Key Learnings:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
+Generate new components using Angular CLI.
 
-## Development server
+## Routing:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ Added navigation bar with options to show respective component templates.
 
-## Code scaffolding
+## One way data binding: 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ Communicate logic to template, increase and decrease the counter value.
 
-## Build
+## Two way data binding: 
+ 
+ Uses form element to show the text entered inside the input box at a new line at real time.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## ng-template: 
+ 
+ Used if and else within templates.
 
-## Running unit tests
+## Style Binding(inline):
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ Modified appearance of UI based on events occuring on the webpage.
 
-## Running end-to-end tests
+## Class Binding: 
+ 
+ Added the style logic inside component instead of template.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Services: 
 
-## Further help
+ Created a service to communicate with an API to fetch data and display on the page.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Angular HTTP Client: 
+ 
+ Integrated HTTP client within the http service, allowing to communicate with API.

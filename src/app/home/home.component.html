@@ -1,0 +1,33 @@
+<h1>Welcome!</h1>
+<div class="play-container">
+    <p>Click to <span (click)="countClick()">+</span> <strong>   {{ clickcounter }}  </strong> <span (click)="decrementClick()">-</span></p>
+</div>
+
+<div class="play-container">
+    <p>
+        <input type="text" [(ngModel)]="name">
+        <br>
+        <strong>You said: </strong> {{ name }}
+    </p>
+</div>
+
+<!-- Style Binding : changing multiple Styles at run time based on condition, use inline for single Style -->
+<!-- <div class="play-container" [ngStyle]="{
+    'background-color' : clickcounter > 4 ? 'yellow' : 'lightgray',
+    'border' :           clickcounter > 4 ? '4px solid black' : 'none'
+}"> -->
+
+<!-- Class Binding : changing multiple Styles at run time based on condition through a class instead of doing it inline 
+        like above -->
+<!-- <div class="play-container" [class.active]="clickcounter > 4"> -->
+
+<!-- To have multiple classes like active, we use the component -->
+<div class="play-container" [ngClass]="setClasses()">
+    <ng-template [ngIf]="clickcounter > 4" [ngIfElse]="none">
+        <p>The click counter <strong>IS GREATER</strong> than 4.</p>
+    </ng-template>
+
+    <ng-template #none>
+        <p>The click counter <strong>is not greater</strong> than 4.</p>
+    </ng-template>
+</div>
